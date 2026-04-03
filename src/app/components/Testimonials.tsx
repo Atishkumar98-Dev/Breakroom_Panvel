@@ -6,11 +6,17 @@ export function Testimonials() {
   const [isPaused, setIsPaused] = useState(false);
 
   const testimonials = [
-    { name: "Rahul Sharma", text: "Best gaming lounge ever! PS5 experience is insane 🔥" },
-    { name: "Aman Verma", text: "Pool tables are top class. Feels like a professional arena." },
-    { name: "Sneha Patel", text: "Food + gaming combo is perfect. Loved the vibe!" },
-    { name: "Rohit Mehta", text: "Amazing vibe, great music & premium setup!" },
+    { name: "Jokshith dsouza", text: "This is the best 8 ball pool near my place in Khanda Colony Panvel. Staff here are so sweet and place here is very clean and has a very good vibe. If anyone is looking for a place to spend time over the weekend to play pool I would highly recommend this place. Their contact number is available on their instagram page." },
+    { name: "Satyam Baviskar", text: "Very spacious and comforting place, the service is up to mark and satisfying. Great on the go place to chill with your homies, the food adds the left over kink to the experience. Definitely deserves a try" },
+    { name: "Tanvi Raje", text: "Love the place 😄😄 Specially the cold coffee and the vibe ☕☕☕✌️✌️" },
+    { name: "Nehal Raje", text: "Must visit place very nice must try cold coffee in beverages " },
+    { name: "Manish Shahane", text: "Wonderful experience ❤️" },
+    { name: "Krishnendu Nair", text: "One of the bestest place to chill and hangout. The PS 5 setup is very comfortable for long gaming sessions. And the coffee in their cafe is absolutely yummy.😍" },
+    { name: "chaitanya", text: "crazy smooth pool table" },
   ];
+  
+// chaitanya
+// Krishnendu Nair
 
   const loopData = [...testimonials, ...testimonials];
 
@@ -59,7 +65,7 @@ export function Testimonials() {
                 className="min-w-[300px] max-w-[300px] bg-white/5 border border-primary/20 backdrop-blur-xl rounded-xl p-6 hover:scale-105 transition"
               >
                 <p className="text-gray-300 mb-4">"{t.text}"</p>
-                <h4 className="text-primary font-bold">{t.name}</h4>
+                <h4 className="text-primary font-bold"> - {t.name}</h4>
               </div>
             ))}
           </motion.div>

@@ -9,10 +9,11 @@ export function Footer({ logo }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const contactInfo = [
-    { icon: MapPin, text: 'Sector-8, Khanda Colony, New Panvel, Navi Mumbai. 410206' },
-    { icon: Phone, text: '+1 (555) 123-4567' },
+    { icon: MapPin, text: '3rd floor, Trimurti sadan, Plot no-30, Sector - 8, Khanda Colony, New Panvel, Navi Mumbai. 410206' },
+    { icon: Phone, text: '+91 91372 94841' },
     { icon: Mail, text: 'info@breakroom.com' },
-    { icon: Clock, text: 'Mon-Sun: 11:00 AM - 2:00 AM' },
+    { icon: Clock, text: 'Mon-Thurs: 11:00 AM - 11:00 PM' },
+    { icon: Clock, text: 'Fri-Sun: 11:00 AM - 1:00 AM' },
   ];
 
   const socialLinks = [
@@ -150,7 +151,7 @@ export function Footer({ logo }: FooterProps) {
         </div>
 
         {/* Newsletter */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -180,7 +181,7 @@ export function Footer({ logo }: FooterProps) {
               </motion.button>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Bar */}
         <motion.div
@@ -191,7 +192,7 @@ export function Footer({ logo }: FooterProps) {
           className="border-t border-primary/20 pt-8 text-center"
         >
           <p className="text-muted-foreground text-sm">
-            &copy; {currentYear} Breakroom. All rights reserved. | Designed with{' '}
+            &copy; {currentYear} Breakroom. All rights reserved | 
             <motion.span
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
