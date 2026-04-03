@@ -10,7 +10,7 @@ interface NavigationProps {
 export function Navigation({ isScrolled, logo }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const menuItems = ['Home', 'About', 'Menu', 'Pool', 'PS5 Zone', 'Gallery', 'Contact'];
+  const menuItems = ['Home', 'About', 'Menu', 'Pool', 'Testimonials','PS5 Zone', 'Gallery', 'Contact'];
 
   const scrollToSection = (section: string) => {
     const sectionId = section.toLowerCase().replace(/\s+/g, '');

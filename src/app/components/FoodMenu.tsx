@@ -17,12 +17,12 @@ export function FoodMenu() {
 
   const menuItems = {
     appetizers: [
-      { name: 'French Fries', price: '₹12', description: 'Crispy Fries with signature sauce', vegetarian: true },
-      { name: 'Peri Peri Fries', price: '₹12', description: 'Crispy Fries with signature sauce', spicy: true, popular: true  },
-      { name: 'Cheesy Peri Peri Fries', price: '₹12', description: 'Crispy Fries with signature sauce'},
-      { name: 'Cheesy Fries', price: '₹12', description: 'Crispy Fries with signature sauce'},
-      { name: 'Loaded Nachos', price: '₹14', description: 'Loaded chips with cheese, jalapeños sauce', popular: true },
-      { name: 'Mozzarella Cheese Sticks', price: '₹10', description: 'Golden fried mozzarella with a dip', vegetarian: true },
+      { name: 'French Fries', price: '₹119', description: 'Crispy Fries with signature sauce', vegetarian: true },
+      { name: 'Peri Peri Fries', price: '₹129', description: 'Crispy Fries with signature sauce', spicy: true, popular: true  },
+      { name: 'Cheesy Peri Peri Fries', price: '₹149', description: 'Crispy Fries with signature sauce'},
+      { name: 'Cheesy Fries', price: '₹139', description: 'Crispy Fries with signature sauce'},
+      { name: 'Loaded Nachos', price: '₹79', description: 'Loaded chips with cheese, jalapeños sauce', popular: true },
+      { name: 'Mozzarella Cheese Sticks', price: '₹189', description: 'Golden fried mozzarella with a dip', vegetarian: true },
       { name: 'Onion Rings', price: '₹8', description: 'Crispy onion rings' },
       { name: 'Potatoe Wedges', price: '₹8', description: 'Crispy Wedges' },
       { name: 'Jalapeno Popers', price: '₹8', description: 'Cheesy Jalapeno Popers' },

@@ -10,6 +10,8 @@ import { PoolSection } from './components/PoolSection';
 import { PS5Zone } from './components/PS5Zone';
 import { Gallery } from './components/Gallery';
 import { Footer } from './components/Footer';
+import { Testimonials } from './components/Testimonials';
+
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,6 +39,7 @@ export default function App() {
       <FoodMenu />
       <PoolSection />
       <PS5Zone />
+      <Testimonials />
       <Gallery />
       <Footer logo={logo} />
     </div>
