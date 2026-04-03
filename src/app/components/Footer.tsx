@@ -9,7 +9,7 @@ export function Footer({ logo }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const contactInfo = [
-    { icon: MapPin, text: '123 Main Street, Downtown City, ST 12345' },
+    { icon: MapPin, text: 'Sector-8, Khanda Colony, New Panvel, Navi Mumbai. 410206' },
     { icon: Phone, text: '+1 (555) 123-4567' },
     { icon: Mail, text: 'info@breakroom.com' },
     { icon: Clock, text: 'Mon-Sun: 11:00 AM - 2:00 AM' },

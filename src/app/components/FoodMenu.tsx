@@ -9,42 +9,54 @@ export function FoodMenu() {
 
   const categories = [
     { id: 'appetizers', name: 'Appetizers' },
-    { id: 'mains', name: 'Main Course' },
-    { id: 'burgers', name: 'Burgers & Sandwiches' },
+    { id: 'momos', name: 'Momos Fried & Steam' },
+    { id: 'noodles', name: 'Bread & Noodles' },
     { id: 'desserts', name: 'Desserts' },
     { id: 'drinks', name: 'Drinks' },
   ];
 
   const menuItems = {
     appetizers: [
-      { name: 'Buffalo Wings', price: '$12', description: 'Crispy wings with signature sauce', spicy: true },
-      { name: 'Loaded Nachos', price: '$14', description: 'Tortilla chips with cheese, jalapeños & sour cream', popular: true },
-      { name: 'Mozzarella Sticks', price: '$10', description: 'Golden fried mozzarella with marinara', vegetarian: true },
-      { name: 'Onion Rings', price: '$8', description: 'Beer-battered crispy onion rings' },
+      { name: 'French Fries', price: '₹12', description: 'Crispy Fries with signature sauce', vegetarian: true },
+      { name: 'Peri Peri Fries', price: '₹12', description: 'Crispy Fries with signature sauce', spicy: true, popular: true  },
+      { name: 'Cheesy Peri Peri Fries', price: '₹12', description: 'Crispy Fries with signature sauce'},
+      { name: 'Cheesy Fries', price: '₹12', description: 'Crispy Fries with signature sauce'},
+      { name: 'Loaded Nachos', price: '₹14', description: 'Loaded chips with cheese, jalapeños sauce', popular: true },
+      { name: 'Mozzarella Cheese Sticks', price: '₹10', description: 'Golden fried mozzarella with a dip', vegetarian: true },
+      { name: 'Onion Rings', price: '₹8', description: 'Crispy onion rings' },
+      { name: 'Potatoe Wedges', price: '₹8', description: 'Crispy Wedges' },
+      { name: 'Jalapeno Popers', price: '₹8', description: 'Cheesy Jalapeno Popers' },
     ],
-    mains: [
-      { name: 'Grilled Ribeye Steak', price: '$28', description: '12oz ribeye with garlic butter', popular: true },
-      { name: 'BBQ Ribs', price: '$24', description: 'Slow-cooked ribs with house BBQ sauce' },
-      { name: 'Chicken Alfredo', price: '$18', description: 'Creamy pasta with grilled chicken' },
-      { name: 'Veggie Bowl', price: '$16', description: 'Quinoa, roasted vegetables & tahini', vegetarian: true },
+    momos: [
+      { name: 'Cheesy Chilli Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
+      { name: 'Peri Peri Cheesy Chilli Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
+      { name: 'Paneer Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
+      { name: 'Peri Peri Paneer Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
+      { name: 'Veg Momos', price: '₹24', description: 'Slow-cooked ribs with house BBQ sauce' },
+      { name: 'Dumplings', price: '₹18', description: 'Steamed' },
+      { name: 'Veggie Bowl', price: '₹16', description: 'Quinoa, roasted vegetables & tahini', vegetarian: true },
     ],
-    burgers: [
-      { name: 'Breakroom Burger', price: '$16', description: 'Double patty, cheese, bacon & special sauce', popular: true },
-      { name: 'Spicy Jalapeño Burger', price: '$15', description: 'Jalapeños, pepper jack & chipotle mayo', spicy: true },
-      { name: 'Veggie Burger', price: '$14', description: 'House-made patty with avocado', vegetarian: true },
-      { name: 'Club Sandwich', price: '$13', description: 'Triple-decker with turkey, bacon & avocado' },
+    noodles: [
+      { name: 'Maggie', price: '₹16', description: 'For Simple Maggie Lover', popular: true },
+      { name: 'Spicy Chessy Maggie', price: '₹15', description: 'Spicy Touch with Cheese', spicy: true },
+      { name: 'Veg Spicy Korean Noodles', price: '₹14', description: 'House-made patty with avocado', vegetarian: true },
+      { name: 'Bao', price: '₹13', description: 'Bao Stuffing that you wont Forget' },
+      { name: 'Stuffed Garlic Bread', price: '₹13', description: 'Stuffed Garlic Bread Cheese and Corn' },
     ],
     desserts: [
-      { name: 'Chocolate Lava Cake', price: '$9', description: 'Warm chocolate cake with vanilla ice cream', popular: true },
-      { name: 'Cheesecake', price: '$8', description: 'New York style with berry compote' },
-      { name: 'Apple Pie', price: '$7', description: 'Classic apple pie with cinnamon' },
-      { name: 'Ice Cream Sundae', price: '$6', description: 'Three scoops with toppings' },
+      { name: 'Chocolate Lava Cake', price: '₹9', description: 'Warm chocolate cake with vanilla ice cream', popular: true },
+      { name: 'Fudge', price: '₹8', description: 'Dessert that completes your incomplete mood' },
+      { name: 'Ice Cream Sundae', price: '₹6', description: 'Three scoops with toppings' },
     ],
     drinks: [
-      { name: 'Craft Beer Selection', price: '$7', description: 'Rotating local and imported beers' },
-      { name: 'Signature Cocktails', price: '$12', description: 'House-crafted cocktails', popular: true },
-      { name: 'Fresh Lemonade', price: '$5', description: 'Freshly squeezed lemonade' },
-      { name: 'Specialty Coffee', price: '$5', description: 'Espresso, cappuccino, latte' },
+      { name: 'Cold Coffee', price: '₹7', description: 'Rotating local and imported beers',popular: true  },
+      { name: 'Lemonade', price: '₹12', description: 'House-crafted cocktails', popular: true },
+      { name: 'BlueBerry Lemonade', price: '₹5', description: 'Freshly squeezed lemonade' },
+      { name: 'Hot Choclate', price: '₹5', description: 'Refreshing Hot Choclate' },
+      { name: 'Tea', price: '₹5', description: 'Lemongrass Ginger Flavoured Special Tea' },
+      { name: 'Coffee', price: '₹5', description: 'Coffee that you love' },
+      { name: 'Americano', price: '₹5', description: 'Espresso, cappuccino, latte' },
+      { name: 'Orange Americano', price: '₹5', description: 'Americano with Orange pulpy touch' },
     ],
   };
 
@@ -92,7 +104,7 @@ export function FoodMenu() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 ₹{
                 activeCategory === category.id
                   ? 'bg-primary text-black shadow-lg shadow-primary/50'
                   : 'bg-card text-foreground border border-primary/30 hover:border-primary'
@@ -171,14 +183,6 @@ export function FoodMenu() {
           <p className="text-muted-foreground mb-6">
             All dishes are prepared fresh to order. Please inform us of any dietary restrictions.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(255, 215, 0, 0.5)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-primary text-black rounded-full hover:bg-primary/90 transition-all duration-300"
-            style={{ fontWeight: 'bold' }}
-          >
-            VIEW FULL MENU
-          </motion.button>
         </motion.div>
       </div>
     </section>

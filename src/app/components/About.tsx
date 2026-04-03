@@ -106,10 +106,10 @@ export function About() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
         >
           {[
-            { number: '12+', label: 'Pool Tables' },
-            { number: '50+', label: 'Menu Items' },
+            { number: '2', label: 'Pool Table and PS5' },
+            { number: '30+', label: 'Menu Items' },
             { number: '1000+', label: 'Happy Customers' },
-            { number: '24/7', label: 'Service' },
+            { number: 'Till Midnight', label: 'Service' },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

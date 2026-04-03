@@ -15,12 +15,11 @@ export function PS5Zone() {
         'PlayStation 5 Console',
         '4K HDR Gaming',
         'Premium Sound System',
-        'Dual Controllers',
-        'Comfortable Gaming Chairs',
-        'Private Gaming Booth',
+        'Max 4 Controllers',
+        '2 Comfortable Rectinler + Bean Bags',
       ],
-      price: '$30',
-      duration: 'per hour',
+      price: '₹120',
+      duration: 'per hour/per controller',
       popular: true,
     },
     {
@@ -31,12 +30,11 @@ export function PS5Zone() {
         'PlayStation 5 Console',
         '4K Gaming Experience',
         'Quality Audio',
-        'Dual Controllers',
-        'Gaming Chairs',
-        'Semi-Private Area',
+        'Max 4 Controllers',
+        '1 Comfortable Sofa + Bean Bags',
       ],
-      price: '$20',
-      duration: 'per hour',
+      price: '₹100',
+      duration: 'per hour/per controller',
     },
   ];
 
@@ -152,7 +150,7 @@ export function PS5Zone() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
               whileHover={{ y: -15, scale: 1.02 }}
-              className={`relative bg-card border rounded-xl p-8 ${
+              className={`relative bg-card border rounded-xl p-8 ₹{
                 setup.popular
                   ? 'border-primary shadow-xl shadow-primary/20'
                   : 'border-primary/20 hover:border-primary/50'
@@ -229,7 +227,7 @@ export function PS5Zone() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)' }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-full py-3 rounded-full transition-all duration-300 ${
+                className={`w-full py-3 rounded-full transition-all duration-300 ₹{
                   setup.popular
                     ? 'bg-primary text-black'
                     : 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-black'
@@ -278,7 +276,7 @@ export function PS5Zone() {
           className="bg-gradient-to-r from-card via-primary/5 to-card border border-primary/20 rounded-xl p-8 text-center"
         >
           <motion.div
-            animate={{ rotate: [0, 10, -10, 0] }}
+           
             transition={{ duration: 2, repeat: Infinity }}
             className="inline-flex items-center gap-2 mb-4"
           >

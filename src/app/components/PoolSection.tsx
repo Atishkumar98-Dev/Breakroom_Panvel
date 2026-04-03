@@ -31,21 +31,21 @@ export function PoolSection() {
 
   const packages = [
     {
-      name: 'Casual Play',
-      price: '$15',
-      duration: 'per hour',
+      name: 'Starter Cue',
+      price: '₹1999',
+      duration: 'Monthly',
       features: ['Standard table', 'Cue rental included', 'Chalk & accessories'],
     },
     {
       name: 'Premium Experience',
-      price: '$25',
-      duration: 'per hour',
+      price: '₹3500',
+      duration: 'Monthly',
       features: ['Premium table', 'Professional cues', 'Private area', 'Priority service'],
       popular: true,
     },
     {
       name: 'Tournament Package',
-      price: '$200',
+      price: '₹6500',
       duration: 'per event',
       features: ['Multiple tables', 'Referee service', 'Live scoring', 'Food & drinks included'],
     },
@@ -103,7 +103,7 @@ export function PoolSection() {
               textShadow: '0 0 20px rgba(255, 215, 0, 0.3)',
             }}
           >
-            POOL & GAMES
+            POOL Zone
           </motion.h2>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -169,7 +169,7 @@ export function PoolSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 whileHover={{ y: -15, scale: 1.03 }}
-                className={`relative bg-card border rounded-lg p-8 text-center ${
+                className={`relative bg-card border rounded-lg p-8 text-center ₹{
                   pkg.popular
                     ? 'border-primary shadow-lg shadow-primary/20'
                     : 'border-primary/20 hover:border-primary/50'
@@ -216,7 +216,7 @@ export function PoolSection() {
                 <motion.button
                   whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)' }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 rounded-full transition-all duration-300 ${
+                  className={`w-full py-3 rounded-full transition-all duration-300 ₹{
                     pkg.popular
                       ? 'bg-primary text-black'
                       : 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-black'
