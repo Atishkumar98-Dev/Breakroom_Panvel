@@ -6,7 +6,7 @@ export function PoolSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  /* 🔥 DYNAMIC PRICING */
+  /* 🔥 UPDATED PRICING LOGIC */
   const getPricing = () => {
     const now = new Date();
     const day = now.getDay(); // 0 = Sunday
@@ -14,15 +14,30 @@ export function PoolSection() {
 
     const isWeekend = day === 0 || day === 6;
 
+    // Weekday before 5 PM
     if (!isWeekend && hour < 17) {
-      return { half: 150, full: 250, label: "Current Pricing" };
+      return {
+        half: 120,
+        full: 200,
+        label: "Weekday Offer (Before 5 PM)",
+      };
     }
 
+    // Weekend before 2 PM
     if (isWeekend && hour < 14) {
-      return { half: 150, full: 250, label: "Current Pricing" };
+      return {
+        half: 120,
+        full: 200,
+        label: "Weekend Offer (Before 2 PM)",
+      };
     }
 
-    return { half: 120, full: 200, label: "Current Pricing" };
+    // Default pricing
+    return {
+      half: 150,
+      full: 250,
+      label: "Regular Pricing",
+    };
   };
 
   const pricing = getPricing();
@@ -30,8 +45,8 @@ export function PoolSection() {
   const features = [
     { icon: Trophy, title: "Tournament Ready", description: "Professional tables" },
     { icon: Users, title: "Group Play", description: "Perfect for teams" },
-    { icon: Clock, title: "Hourly Rates", description: "Affordable pricing" },
-    { icon: Zap, title: "Premium Equipment", description: "Top quality cues" },
+    { icon: Clock, title: "Hourly Rates", description: "Flexible pricing" },
+    { icon: Zap, title: "Premium Equipment", description: "Top-quality cues" },
   ];
 
   const packages = [
@@ -62,8 +77,7 @@ export function PoolSection() {
       ref={ref}
       className="py-20 px-4 bg-gradient-to-b from-secondary/30 to-black relative overflow-hidden"
     >
-
-      {/* 🔥 GLOW BACKGROUND */}
+      {/* 🔥 Glow Background */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
         transition={{ duration: 8, repeat: Infinity }}
@@ -92,7 +106,7 @@ export function PoolSection() {
             <Gamepad2 className="w-10 h-10 text-primary" />
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl text-primary font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary">
             POOL ZONE
           </h2>
 
@@ -103,12 +117,12 @@ export function PoolSection() {
           />
         </motion.div>
 
-        {/* 🔥 DESCRIPTION */}
+        {/* DESCRIPTION */}
         <p className="text-center text-gray-400 max-w-3xl mx-auto mb-16">
           Experience the finest pool tables with premium equipment and pro-level gameplay.
         </p>
 
-        {/* 🔥 DYNAMIC PRICING */}
+        {/* 🔥 PRICING SECTION */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -118,12 +132,17 @@ export function PoolSection() {
             HOURLY PRICING
           </h3>
 
-          <p className="text-primary mb-6 font-semibold">
+          <p className="text-primary mb-2 font-semibold">
             {pricing.label}
+          </p>
+
+          <p className="text-sm text-gray-400 mb-6">
+            💡 Weekday before 5 PM & Weekend before 2 PM get discounted pricing
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-xl mx-auto">
 
+            {/* HALF */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="p-6 rounded-xl border border-primary/30 bg-white/5 backdrop-blur-lg"
@@ -134,6 +153,7 @@ export function PoolSection() {
               </p>
             </motion.div>
 
+            {/* FULL */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="p-6 rounded-xl border border-primary/30 bg-white/5 backdrop-blur-lg"
@@ -147,7 +167,7 @@ export function PoolSection() {
           </div>
         </motion.div>
 
-        {/* 🔥 FEATURES */}
+        {/* FEATURES */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {features.map((f, i) => (
             <motion.div
@@ -162,10 +182,8 @@ export function PoolSection() {
           ))}
         </div>
 
-        {/* 🔥 PACKAGES */}
-        
+        {/* PACKAGES */}
         <div className="grid md:grid-cols-3 gap-8">
-          
           {packages.map((pkg, i) => (
             <motion.div
               key={i}

@@ -11,14 +11,14 @@ export function Footer({ logo }: FooterProps) {
   const contactInfo = [
     { icon: MapPin, text: '3rd floor, Trimurti sadan, Plot no-30, Sector - 8, Khanda Colony, New Panvel, Navi Mumbai. 410206' },
     { icon: Phone, text: '+91 91372 94841' },
-    { icon: Mail, text: 'info@breakroom.com' },
+    { icon: Mail, text: 'breakroom008@gmail.com' },
     { icon: Clock, text: 'Mon-Thurs: 11:00 AM - 11:00 PM' },
     { icon: Clock, text: 'Fri-Sun: 11:00 AM - 1:00 AM' },
   ];
 
   const socialLinks = [
     { icon: Facebook, label: 'Facebook', href: '#' },
-    { icon: Instagram, label: 'Instagram', href: '#' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/breakroom_08/' },
     { icon: Twitter, label: 'Twitter', href: '#' },
   ];
 
@@ -192,15 +192,13 @@ export function Footer({ logo }: FooterProps) {
           className="border-t border-primary/20 pt-8 text-center"
         >
           <p className="text-muted-foreground text-sm">
-            &copy; {currentYear} Breakroom. All rights reserved | 
+            &copy; {currentYear} Breakroom. All rights reserved
             <motion.span
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
               className="text-primary inline-block"
             >
-              ♠
-            </motion.span>{' '}
-            for champions
+            </motion.span>
           </p>
         </motion.div>
       </div>
