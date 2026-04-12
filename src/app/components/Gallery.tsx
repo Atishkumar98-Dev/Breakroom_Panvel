@@ -2,27 +2,44 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+import drinks   from "../img-webp/drinks1.webp";
+import drinks2  from "../img-webp/drinks4.webp";
+import drinks5  from "../img-webp/drinks5.webp";
+import food     from "../img-webp/foodmomo.webp";
+import food2    from "../img-webp/food1.webp";
+import food3    from "../img-webp/food3.webp";
+import food4    from "../img-webp/food2.webp";
+import food5    from "../img-webp/foodmain.webp";
+import food6    from "../img-webp/food1.webp";
+
+import pool1 from "../img-webp/pool3.webp";
+
+import gaming1 from "../img-webp/ps4.webp";
+import gaming2 from "../img-webp/ps1.webp";
+
 export function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [showAll, setShowAll] = useState(false);
 
   const galleryItems = [
-    { title: "Pool Tables", category: "Gaming", image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800" },
-    { title: "Burger", category: "Food", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" },
-    { title: "Cocktails", category: "Drinks", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800" },
-    { title: "Gaming Night", category: "Gaming", image: "https://images.unsplash.com/photo-1511882150382-421056c89033?w=800" },
-    { title: "Pizza", category: "Food", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" },
-    { title: "Mocktails", category: "Drinks", image: "https://images.pexels.com/photos/36260433/pexels-photo-36260433.jpeg?_gl=1*odp83q*_ga*NjkxMTUzMzI5LjE3NzUyNTMyODU.*_ga_8JE65Q40S6*czE3NzUyNTMyODUkbzEkZzEkdDE3NzUyNTMzMTYkajI5JGwwJGgw" },
+    { title: "Pool Tables", category: "Gaming", image: pool1 },
+    { title: "Burger", category: "Food", image: food },
+    { title: "Cocktails", category: "Drinks", image: drinks },
+    { title: "Gaming Night", category: "Gaming", image: gaming1 },
+    { title: "Pizza", category: "Food", image: food2 },
+    { title: "Mocktails", category: "Drinks", image: drinks2 },
 
-    // MORE
-    { title: "Snacks", category: "Food", image: "https://images.unsplash.com/photo-1541589456737-dff1db0887e4?w=800" },
-    { title: "PS5 Gaming", category: "Gaming", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800" },
-    { title: "Cafe Drinks", category: "Drinks", image: "https://images.unsplash.com/photo-1527169402691-feff5539e52c?w=800" },
+    { title: "Snacks", category: "Food", image: food3 },
+    { title: "Snacks", category: "Food", image: food6 },
+    { title: "Snacks", category: "Food", image: food5 },
+    { title: "Snacks", category: "Food", image: food4 },
+
+    { title: "PS Gaming", category: "Gaming", image: gaming2 },
+    { title: "Cafe Drinks", category: "Drinks", image: drinks5 },
   ];
 
   const categories = ["All", "Food", "Gaming", "Drinks"];
 
-  // FILTER LOGIC
   const filteredItems =
     activeCategory === "All"
       ? galleryItems
@@ -32,7 +49,6 @@ export function Gallery() {
 
   return (
     <section className="py-20 bg-black px-4">
-
       <div className="max-w-7xl mx-auto">
 
         {/* TITLE */}
@@ -40,7 +56,7 @@ export function Gallery() {
           GALLERY
         </h2>
 
-        {/* 🔥 CATEGORY TABS */}
+        {/* CATEGORY BUTTONS */}
         <div className="flex justify-center gap-4 mb-10 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -49,10 +65,10 @@ export function Gallery() {
                 setActiveCategory(cat);
                 setShowAll(false);
               }}
-              className={`px-5 py-2 rounded-full border ${
+              className={`px-5 py-2 rounded-full border transition ${
                 activeCategory === cat
                   ? "bg-primary text-black"
-                  : "border-primary text-primary"
+                  : "border-primary text-primary hover:bg-primary hover:text-black"
               }`}
             >
               {cat}
@@ -62,14 +78,13 @@ export function Gallery() {
 
         {/* GRID */}
         <motion.div layout className="grid md:grid-cols-3 gap-6">
-
           {visibleItems.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={index}
               layout
               whileHover={{ y: -10 }}
               onClick={() => {
-                setActiveCategory(item.category); // 🔥 CLICK FILTER
+                setActiveCategory(item.category);
                 setShowAll(true);
               }}
               className="relative cursor-pointer overflow-hidden rounded-lg aspect-[4/3]"
@@ -77,7 +92,9 @@ export function Gallery() {
               <ImageWithFallback
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                loading={index < 3 ? "eager" : "lazy"}   // first images fast
+                decoding="async"
+                className="w-full h-full object-cover transition duration-500 hover:scale-105"
               />
 
               {/* OVERLAY */}
@@ -89,16 +106,19 @@ export function Gallery() {
               </div>
             </motion.div>
           ))}
-
         </motion.div>
 
-        {/* BUTTON */}
+        {/* VIEW MORE BUTTON */}
         <div className="text-center mt-12">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-8 py-4 bg-primary text-black rounded-full font-bold"
+            className="px-8 py-4 bg-primary text-black rounded-full font-bold hover:scale-105 transition"
           >
-            {showAll ? "VIEW LESS" : `VIEW MORE ${activeCategory !== "All" ? activeCategory : ""} PHOTOS`}
+            {showAll
+              ? "VIEW LESS"
+              : `VIEW MORE ${
+                  activeCategory !== "All" ? activeCategory : ""
+                } PHOTOS`}
           </button>
         </div>
 
