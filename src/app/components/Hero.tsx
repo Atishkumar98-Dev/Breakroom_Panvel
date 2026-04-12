@@ -57,7 +57,7 @@ export function Hero({ logo }: HeroProps) {
           transition={{ duration: 0.8 }}
           className="mb-8 flex justify-center"
         >
-          <motion.img
+          {/* <motion.img
             src={logo}
             alt="Breakroom Logo"
             loading="eager"
@@ -68,7 +68,7 @@ export function Hero({ logo }: HeroProps) {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-          />
+          /> */}
         </motion.div>
 
         {/* Text */}
