@@ -54,20 +54,20 @@ export function PoolSection() {
       name: "Starter Cue",
       price: "₹1999",
       duration: "Monthly",
-      features: ["Standard table", "Cue rental", "Accessories"],
+      features: ["Total 10 Hours ","Max 4 Players", "Hour Per Table", "1 Day Prior Booking Required", "Validity 30 Days From Purchase","No Hours Claim on Weekends"],
     },
     {
-      name: "Premium Experience",
-      price: "₹3500",
+      name: "Pro Player",
+      price: "₹3699",
       duration: "Monthly",
-      features: ["Premium table", "Private area", "Priority service"],
+      features: ["Total 20 Hours ","Max 4 Players", "Hour Per Table", "1 Day Prior Booking Required", "Validity 30 Days From Purchase","No Hours Claim on Weekends"],
       popular: true,
     },
     {
-      name: "Tournament Package",
-      price: "₹6500",
+      name: "Breakroom Elite",
+      price: "₹4999",
       duration: "Per Event",
-      features: ["Multiple tables", "Referee", "Live scoring"],
+      features: ["Total 30 Hours ","Max 4 Players", "Hour Per Table", "1 Day Prior Booking Required", "Validity 30 Days From Purchase","No Hours Claim on Weekends"],
     },
   ];
 

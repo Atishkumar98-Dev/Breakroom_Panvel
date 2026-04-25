@@ -8,14 +8,14 @@ export function About() {
 
   const features = [
     {
-      icon: Utensils,
-      title: 'Gourmet Cuisine',
-      description: 'Chef-crafted dishes made with premium ingredients',
-    },
-    {
       icon: Trophy,
       title: 'Premium Pool Tables',
       description: 'Professional-grade tables for the ultimate experience',
+    },
+    {
+      icon: Utensils,
+      title: 'In-House Kitchen',
+      description: 'From our kitchen to your plate — freshly made, high-quality dishes with a touch of excellence.”',
     },
     {
       icon: Users,
@@ -24,7 +24,7 @@ export function About() {
     },
     {
       icon: Clock,
-      title: 'Open Late',
+      title: 'Late Night Vibes',
       description: 'Extended hours for night owls and weekend warriors',
     },
   ];
@@ -108,8 +108,8 @@ export function About() {
           {[
             { number: '2', label: 'Pool Table and PS5' },
             { number: '30+', label: 'Menu Items' },
-            { number: '1000+', label: 'Happy Customers' },
-            { number: 'Till Midnight', label: 'Service' },
+            { number: '100+', label: 'Happy Customers' },
+           { number: 'Open Late', label: 'Up to 1 AM* on weekends' }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
