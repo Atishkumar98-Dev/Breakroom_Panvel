@@ -1,3 +1,50 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+.logo-text {
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+
+  background: linear-gradient(180deg, #FFD700 20%, #E6B800 60%, #B8860B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  position: relative;
+  text-align: center;
+}
+ .play-eat-repeat{
+    font-size: 35px ;        /* 🔥 smaller */
+    letter-spacing: 2px;    /* 🔥 tighter */
+    line-height: 1.1;
+  }
+/* FIXED overlay alignment */
+.logo-text::after {
+  content: "BREAKROOM"; /* 👈 dynamic instead of hardcoded */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  color: rgba(0, 0, 0, 0.15);
+  mix-blend-mode: multiply;
+
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 36px;        /* 🔥 smaller */
+    letter-spacing: 3px;    /* 🔥 tighter */
+    line-height: 1.2;
+  }
+  .play-eat-repeat{
+    font-size: 12px ;        /* 🔥 smaller */
+    letter-spacing: 3px;    /* 🔥 tighter */
+    line-height: 1.5;
+  }
+}

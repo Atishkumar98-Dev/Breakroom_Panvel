@@ -1,12 +1,9 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
+import poolBg from "../img-webp/pool3.webp";
 
-interface HeroProps {
-  logo: string;
-}
-
-export function Hero({ logo }: HeroProps) {
+export function Hero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -29,83 +26,70 @@ export function Hero({ logo }: HeroProps) {
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-primary/20">
+      <div className="absolute inset-0 overflow-hidden">
 
-        {/* floating orb 1 */}
+        <motion.img
+  src={poolBg}
+  alt="Pool table background"
+  className="absolute inset-0 w-full h-full object-cover blur-sm scale-110"
+  style={{ opacity: 0.6 }}   // 🔥 was 0.35
+  animate={{ scale: [1.1, 1.2, 1.1] }}
+  transition={{ duration: 20, repeat: Infinity }}
+/>
+
+        {/* Dark Overlay */}
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-primary/30" /> */}
+
+        {/* Glow Effects */}
         <motion.div
           animate={{ y: [0, -40, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-2xl will-change-transform"
+          transition={{ duration: 8, repeat: Infinity }}
+          className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-2xl"
         />
 
-        {/* floating orb 2 */}
         <motion.div
           animate={{ y: [0, 40, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-2xl will-change-transform"
+          transition={{ duration: 10, repeat: Infinity }}
+          className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-2xl"
         />
       </div>
 
+      {/* Content */}
       <motion.div
         style={{ y, opacity }}
         className="relative z-10 text-center px-4"
       >
-        {/* Logo */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8 flex justify-center"
+        {/* BREAKROOM TEXT */}
+        <h1 className="logo-text">
+  Breakroom
+</h1>
+
+        {/* TAGLINE */}
+        <p
+          className="play-eat-repeat"
+          style={{
+            fontFamily: "Anton",
+            letterSpacing: "4px",
+            color: "#ffffff",
+            textShadow: "0 0 20px rgba(255, 255, 255, 0.19)"
+          }}
         >
-          {/* <motion.img
-            src={logo}
-            alt="Breakroom Logo"
-            loading="eager"
-            className="w-56 md:w-72 will-change-transform"
-            animate={{ y: [0, -12, 0] }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          /> */}
-        </motion.div>
+          PLAY | EAT | REPEAT
+        </p>
 
-        {/* Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="space-y-4"
-        >
-          <h1
-            className="text-5xl md:text-7xl tracking-wider"
-            style={{
-              fontWeight: "bold",
-              color: "#FFD700",
-              textShadow: "0 0 15px rgba(255,215,0,0.5)",
-            }}
-          >
-            BREAKROOM
-          </h1>
-
-          <p className="text-xl md:text-2xl text-foreground tracking-widest">
-            PLAY. EAT. REPEAT.
-          </p>
-
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-6">
-            Where great food meets great games. Experience the ultimate blend
-            of gourmet cuisine and competitive pool in an atmosphere designed
-            for champions.
-          </p>
-        </motion.div>
+        {/* Description */}
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-6">
+          Where great food meets great games. Experience the ultimate blend
+          of gourmet cuisine and competitive pool in an atmosphere designed
+          for champions.
+        </p>
 
         {/* Button */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={scrollToAbout}
-          className="mt-12 px-8 py-4 bg-primary text-black rounded-full tracking-wider hover:bg-primary/90 transition-all duration-300 font-bold"
+          className="mt-12 px-8 py-4 bg-primary text-black rounded-full font-bold tracking-wider"
         >
           EXPLORE MORE
         </motion.button>
