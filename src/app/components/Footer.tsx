@@ -17,9 +17,9 @@ export function Footer({ logo }: FooterProps) {
   ];
 
   const socialLinks = [
-    { icon: Facebook, label: 'Facebook', href: '#' },
+    // { icon: Facebook, label: 'Facebook', href: '#' },
     { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/breakroom_08/' },
-    { icon: Twitter, label: 'Twitter', href: '#' },
+    // { icon: Twitter, label: 'Twitter', href: '#' },
   ];
 
   const quickLinks = [

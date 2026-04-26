@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Gamepad2, Monitor, Users, Wifi, Trophy, Zap, Crown, Star } from 'lucide-react';
+import { Gamepad2, Monitor, Users, Wifi, Trophy, Zap, Crown, Star ,Phone, MessageCircle } from 'lucide-react';
+
 
 export function PS5Zone() {
   const ref = useRef(null);
@@ -224,18 +225,47 @@ export function PS5Zone() {
                 ))}
               </ul>
 
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)' }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-full py-3 rounded-full transition-all duration-300 ₹{
-                  setup.popular
-                    ? 'bg-primary text-black'
-                    : 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-black'
-                }`}
-                style={{ fontWeight: 'bold' }}
-              >
-                RESERVE NOW
-              </motion.button>
+            
+<div className="flex gap-4">
+
+  {/* WHATSAPP */}
+  <motion.a
+    href={`https://wa.me/919137294841?text=Hi%20I%20want%20to%20book%20a%20${setup.name}%20please%20suggest%20me%20available%20slots`}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.07 }}
+    whileTap={{ scale: 0.95 }}
+    className="relative w-full py-3 overflow-hidden group flex items-center justify-center gap-2 font-semibold tracking-wide"
+  >
+    {/* Yellow Glow */}
+    {/* <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-[#FFED4E] to-[#FFED4E] opacity-90 blur-sm group-hover:blur-md transition"></div> */}
+
+    {/* Glass Layer */}
+    <div className="relative z-10 flex items-center gap-2 bg-black/50  border border-[#FFD700]/30 rounded-full px-4 py-3 text-[#FFD700]">
+      <MessageCircle className="w-5 h-5" />
+      Book on WhatsApp
+    </div>
+  </motion.a>
+
+
+  {/* CALL BUTTON */}
+  <motion.a
+    href="tel:+919137294841"
+    whileHover={{ scale: 1.07 }}
+    whileTap={{ scale: 0.95 }}
+    className="relative w-full py-3  overflow-hidden group flex items-center justify-center gap-2 font-semibold tracking-wide"
+  >
+    {/* Yellow Glow */}
+    {/* <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-[#E6B800] to-[#FFD700] opacity-90 blur-sm group-hover:blur-md transition"></div> */}
+
+    {/* Glass Layer */}
+    <div className="relative z-10 flex items-center gap-2 bg-black/50 backdrop-blur-md border border-[#FFD700]/30 rounded-full px-4 py-3 text-[#FFD700]">
+      <Phone className="w-5 h-5" />
+      Call Now
+    </div>
+  </motion.a>
+
+</div>
             </motion.div>
           ))}
         </div>
@@ -288,10 +318,10 @@ export function PS5Zone() {
           </motion.div>
           <p className="text-muted-foreground mb-4 max-w-3xl mx-auto">
             Access a vast collection of the latest PS5 games including action, sports, racing, and adventure titles.
-            From FIFA and NBA 2K to Call of Duty and Spider-Man, we've got all the hits!
+            From FIFA to Call of Duty and Spider-Man, we've got all the hits!
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-6">
-            {['FIFA', 'COD', 'NBA 2K', 'Spider-Man', 'God of War', 'Gran Turismo'].map((game, i) => (
+            {['FIFA 2K26', 'COD Black OPS II ', 'WWE 2K25', 'Spider-Man', 'Ghost of Tsushima', 'Street Fighter','Mortal Kombat'].map((game, i) => (
               <motion.span
                 key={game}
                 initial={{ opacity: 0, scale: 0 }}
@@ -307,7 +337,7 @@ export function PS5Zone() {
         </motion.div>
 
         {/* Special Offers */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.5 }}
@@ -337,7 +367,7 @@ export function PS5Zone() {
               <p className="text-muted-foreground text-sm">{offer.detail}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
