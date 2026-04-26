@@ -12,57 +12,70 @@ export function FoodMenu() {
     { id: 'momos', name: 'Momos Fried & Steam' },
     { id: 'noodles', name: 'Bread & Noodles' },
     { id: 'desserts', name: 'Desserts' },
+    { id: 'dips', name: 'Dips & Sauces' },
     { id: 'drinks', name: 'Drinks' },
   ];
 
   const menuItems = {
     appetizers: [
-      { name: 'French Fries', price: '₹119', description: 'Crispy Fries with signature sauce', vegetarian: true },
-      { name: 'Peri Peri Fries', price: '₹129', description: 'Crispy Fries with signature sauce', spicy: true, popular: true  },
-      { name: 'Cheesy Peri Peri Fries', price: '₹149', description: 'Crispy Fries with signature sauce'},
-      { name: 'Cheesy Fries', price: '₹139', description: 'Crispy Fries with signature sauce'},
-      { name: 'Loaded Nachos', price: '₹79', description: 'Loaded chips with cheese, jalapeños sauce', popular: true },
-      { name: 'Mozzarella Cheese Sticks', price: '₹189', description: 'Golden fried mozzarella with a dip', vegetarian: true },
-      { name: 'Onion Rings', price: '₹8', description: 'Crispy onion rings' },
-      { name: 'Potatoe Wedges', price: '₹8', description: 'Crispy Wedges' },
-      { name: 'Jalapeno Popers', price: '₹8', description: 'Cheesy Jalapeno Popers' },
+      { name: 'French Fries', price: '₹119', description: 'Golden crispy fries seasoned to perfection, served with our signature dip', vegetarian: true },
+      { name: 'Peri Peri Fries', price: '₹129', description: 'Crispy fries tossed in bold peri peri seasoning for a spicy kick', spicy: true, popular: true },
+      { name: 'Cheesy Peri Peri Fries', price: '₹149', description: 'Loaded fries with melted cheese and spicy peri peri glaze' },
+      { name: 'Cheesy Fries', price: '₹139', description: 'Hot crispy fries topped with rich, creamy melted cheese' },
+      { name: 'Loaded Nachos', price: '₹79', description: 'Crunchy nachos layered with cheese, tangy jalapeños & zesty sauces', popular: true },
+      { name: 'Mozzarella Cheese Sticks', price: '₹189', description: 'Crispy coated mozzarella sticks with a gooey cheesy center', vegetarian: true },
+      { name: 'Potatoe Wedges', price: '₹129', description: 'Thick-cut potato wedges, crisp outside and fluffy inside' },
+      { name: 'Jalapeno Popers', price: '₹179', description: 'Cheese-filled jalapeños coated and fried to golden perfection' },
     ],
+
     momos: [
-      { name: 'Cheesy Chilli Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
-      { name: 'Peri Peri Cheesy Chilli Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
-      { name: 'Paneer Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
-      { name: 'Peri Peri Paneer Momos', price: '₹28', description: '12oz ribeye with garlic butter', popular: true },
-      { name: 'Veg Momos', price: '₹24', description: 'Slow-cooked ribs with house BBQ sauce' },
-      { name: 'Dumplings', price: '₹18', description: 'Steamed' },
-      { name: 'Veggie Bowl', price: '₹16', description: 'Quinoa, roasted vegetables & tahini', vegetarian: true },
+      { name: 'Cheesy Chilli Momos', price: '₹159', description: 'Soft dumplings tossed in spicy chilli sauce with a cheesy twist', popular: true },
+      { name: 'Peri Peri Cheesy Chilli Momos', price: '₹169', description: 'Flavor-packed momos coated in fiery peri peri and melted cheese', popular: true },
+      { name: 'Paneer Momos', price: '₹149', description: 'Delicate dumplings filled with seasoned paneer and aromatic spices', popular: true },
+      { name: 'Peri Peri Paneer Momos', price: '₹159', description: 'Paneer-filled momos tossed in bold peri peri flavors', popular: true },
+      { name: 'Veg Momos', price: '₹139', description: 'Steamed dumplings stuffed with finely seasoned vegetables' },
+      { name: 'Veg Peri Peri Momos', price: '₹139', description: 'Veggie-filled momos with a spicy peri peri punch' },
+      { name: 'Dumplings', price: '₹159', description: 'Soft steamed dumplings served hot with flavorful dipping sauce' },
+      { name: 'Veggie Bowl', price: '₹160', description: 'A wholesome mix of veggies, grains & flavorful dressing', vegetarian: true },
     ],
+
+    dips: [
+      { name: 'Mayonise', price: '₹29', description: 'Creamy classic mayo dip', vegetarian: true },
+      { name: 'Chipotle', price: '₹29', description: 'Smoky chipotle dip with a spicy twist', vegetarian: true },
+      { name: 'Cheese Dip', price: '₹39', description: 'Rich and creamy cheese sauce', vegetarian: true },
+    ],
+
     noodles: [
-      { name: 'Maggie', price: '₹16', description: 'For Simple Maggie Lover', popular: true },
-      { name: 'Spicy Chessy Maggie', price: '₹15', description: 'Spicy Touch with Cheese', spicy: true },
-      { name: 'Veg Spicy Korean Noodles', price: '₹14', description: 'House-made patty with avocado', vegetarian: true },
-      { name: 'Bao', price: '₹13', description: 'Bao Stuffing that you wont Forget' },
-      { name: 'Stuffed Garlic Bread', price: '₹13', description: 'Stuffed Garlic Bread Cheese and Corn' },
+      { name: 'Maggie', price: '₹49', description: 'Classic comfort noodles cooked with our signature masala touch', popular: true },
+      { name: 'Double Masala Maggie', price: '₹59', description: 'Extra masala-loaded noodles for a richer, bolder taste', popular: true },
+      { name: 'Spicy Chessy Noodles', price: '₹80', description: 'Hot noodles tossed in spicy sauce with creamy melted cheese', spicy: true },
+      { name: 'Veg Spicy Korean Noodles', price: '₹89', description: 'Korean-style noodles with bold spices and veggie crunch', vegetarian: true },
+      { name: 'Bao', price: '₹199', description: 'Soft fluffy bao stuffed with flavorful fillings you’ll love' },
+      { name: 'Stuffed Garlic Bread', price: '₹149', description: 'Buttery garlic bread loaded with cheese and sweet corn filling' },
     ],
+
     desserts: [
-      { name: 'Chocolate Lava Cake', price: '₹9', description: 'Warm chocolate cake with vanilla ice cream', popular: true },
-      { name: 'Fudge', price: '₹8', description: 'Dessert that completes your incomplete mood' },
-      { name: 'Ice Cream Sundae', price: '₹6', description: 'Three scoops with toppings' },
+      { name: 'Chocolate Lava Cake', price: '₹69', description: 'Warm chocolate cake with a rich molten center', popular: true },
+      { name: 'Fudge', price: '₹79', description: 'Smooth, rich chocolate fudge for a perfect sweet finish' },
     ],
+
     drinks: [
-      { name: 'Cold Coffee', price: '₹7', description: 'Rotating local and imported beers',popular: true  },
-      { name: 'Lemonade', price: '₹12', description: 'House-crafted cocktails', popular: true },
-      { name: 'BlueBerry Lemonade', price: '₹5', description: 'Freshly squeezed lemonade' },
-      { name: 'Hot Choclate', price: '₹5', description: 'Refreshing Hot Choclate' },
-      { name: 'Tea', price: '₹5', description: 'Lemongrass Ginger Flavoured Special Tea' },
-      { name: 'Coffee', price: '₹5', description: 'Coffee that you love' },
-      { name: 'Americano', price: '₹5', description: 'Espresso, cappuccino, latte' },
-      { name: 'Orange Americano', price: '₹5', description: 'Americano with Orange pulpy touch' },
+      { name: 'Tea', price: '₹29', description: 'Refreshing tea infused with aromatic flavors' },
+      { name: 'Lemon Tea', price: '₹39', description: 'Light and zesty lemon-infused tea' },
+      { name: 'Coffee', price: '₹49', description: 'Freshly brewed coffee with a bold aroma' },
+      { name: 'Hot Choclate', price: '₹109', description: 'Rich and creamy hot chocolate' },
+      { name: 'Cold Coffee', price: '₹109', description: 'Chilled coffee blended to smooth perfection', popular: true },
+      { name: 'Lemonade', price: '₹40', description: 'Refreshing classic lemonade', popular: true },
+      { name: 'BlueBerry Lemonade', price: '₹90', description: 'Fruity blueberry twist on refreshing lemonade' },
+      { name: 'Americano', price: '₹99', description: 'Smooth espresso diluted for a rich coffee experience' },
+      { name: 'Orange Coffee', price: '₹139', description: 'A unique blend of coffee with a citrusy orange twist' },
     ],
   };
 
   return (
     <section id="menu" ref={ref} className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
+
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -80,6 +93,7 @@ export function FoodMenu() {
           >
             OUR MENU
           </motion.h2>
+
           <motion.div
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
@@ -104,12 +118,11 @@ export function FoodMenu() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ₹{
+              className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeCategory === category.id
                   ? 'bg-primary text-black shadow-lg shadow-primary/50'
                   : 'bg-card text-foreground border border-primary/30 hover:border-primary'
               }`}
-              style={{ fontWeight: activeCategory === category.id ? 'bold' : 'normal' }}
             >
               {category.name}
             </motion.button>
@@ -136,36 +149,29 @@ export function FoodMenu() {
               <div className="flex justify-between items-start mb-2">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-primary group-hover:text-primary/90" style={{ fontWeight: 'bold' }}>
+                    <h3 className="text-primary group-hover:text-primary/90 font-bold">
                       {item.name}
                     </h3>
+
                     {item.popular && (
-                      <motion.div
-                        animate={{ rotate: [0, 20, -20, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
+                      <motion.div animate={{ rotate: [0, 20, -20, 0] }} transition={{ duration: 2, repeat: Infinity }}>
                         <Star className="w-5 h-5 text-primary fill-primary" />
                       </motion.div>
                     )}
+
                     {item.spicy && (
-                      <motion.div
-                        animate={{ y: [0, -3, 0] }}
-                        transition={{ duration: 1, repeat: Infinity }}
-                      >
+                      <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 1, repeat: Infinity }}>
                         <Flame className="w-5 h-5 text-red-500" />
                       </motion.div>
                     )}
-                    {item.vegetarian && (
-                      <Leaf className="w-5 h-5 text-green-500" />
-                    )}
+
+                    {item.vegetarian && <Leaf className="w-5 h-5 text-green-500" />}
                   </div>
+
                   <p className="text-muted-foreground text-sm">{item.description}</p>
                 </div>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="text-primary ml-4"
-                  style={{ fontWeight: 'bold' }}
-                >
+
+                <motion.div whileHover={{ scale: 1.1 }} className="text-primary ml-4 font-bold">
                   {item.price}
                 </motion.div>
               </div>
@@ -184,6 +190,7 @@ export function FoodMenu() {
             All dishes are prepared fresh to order. Please inform us of any dietary restrictions.
           </p>
         </motion.div>
+
       </div>
     </section>
   );
