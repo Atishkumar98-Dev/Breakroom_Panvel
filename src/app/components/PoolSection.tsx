@@ -184,7 +184,7 @@ export function PoolSection() {
       <motion.a
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        href="https://wa.me/919999999999?text=Hi%20Breakroom,%20I%20would%20like%20to%20book%20a%20pool%20table."
+        href="https://wa.me/919137294841?text=Hi%20Breakroom,%20I%20would%20like%20to%20book%20a%20pool%20table."
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold rounded-full shadow-lg"
