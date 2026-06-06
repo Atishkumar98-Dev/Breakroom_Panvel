@@ -18,25 +18,25 @@ export function FoodMenu() {
 
   const menuItems = {
     appetizers: [
-      { name: 'French Fries', price: '₹119', description: 'Golden crispy fries seasoned to perfection, served with our signature dip', vegetarian: true },
-      { name: 'Peri Peri Fries', price: '₹129', description: 'Crispy fries tossed in bold peri peri seasoning for a spicy kick', spicy: true, popular: true },
-      { name: 'Cheesy Peri Peri Fries', price: '₹149', description: 'Loaded fries with melted cheese and spicy peri peri glaze' },
-      { name: 'Cheesy Fries', price: '₹139', description: 'Hot crispy fries topped with rich, creamy melted cheese' },
-      { name: 'Loaded Nachos', price: '₹79', description: 'Crunchy nachos layered with cheese, tangy jalapeños & zesty sauces', popular: true },
+      { name: 'French Fries', price: '₹129', description: 'Golden crispy fries seasoned to perfection, served with our signature dip', vegetarian: true },
+      { name: 'Peri Peri Fries', price: '₹139', description: 'Crispy fries tossed in bold peri peri seasoning for a spicy kick', spicy: true, popular: true },
+      { name: 'Cheesy Peri Peri Fries', price: '₹159', description: 'Loaded fries with melted cheese and spicy peri peri glaze' },
+      { name: 'Cheesy Fries', price: '₹149', description: 'Hot crispy fries topped with rich, creamy melted cheese' },
+      { name: 'Loaded Nachos', price: '₹99', description: 'Crunchy nachos layered with cheese, tangy jalapeños & zesty sauces', popular: true },
       { name: 'Mozzarella Cheese Sticks', price: '₹189', description: 'Crispy coated mozzarella sticks with a gooey cheesy center', vegetarian: true },
-      { name: 'Potatoe Wedges', price: '₹129', description: 'Thick-cut potato wedges, crisp outside and fluffy inside' },
+      { name: 'Potatoe Wedges', price: '₹149', description: 'Thick-cut potato wedges, crisp outside and fluffy inside' },
       { name: 'Jalapeno Popers', price: '₹179', description: 'Cheese-filled jalapeños coated and fried to golden perfection' },
     ],
 
     momos: [
-      { name: 'Cheesy Chilli Momos', price: '₹159', description: 'Soft dumplings tossed in spicy chilli sauce with a cheesy twist', popular: true },
-      { name: 'Peri Peri Cheesy Chilli Momos', price: '₹169', description: 'Flavor-packed momos coated in fiery peri peri and melted cheese', popular: true },
-      { name: 'Paneer Momos', price: '₹149', description: 'Delicate dumplings filled with seasoned paneer and aromatic spices', popular: true },
-      { name: 'Peri Peri Paneer Momos', price: '₹159', description: 'Paneer-filled momos tossed in bold peri peri flavors', popular: true },
-      { name: 'Veg Momos', price: '₹139', description: 'Steamed dumplings stuffed with finely seasoned vegetables' },
-      { name: 'Veg Peri Peri Momos', price: '₹139', description: 'Veggie-filled momos with a spicy peri peri punch' },
-      { name: 'Dumplings', price: '₹159', description: 'Soft steamed dumplings served hot with flavorful dipping sauce' },
-      { name: 'Veggie Bowl', price: '₹160', description: 'A wholesome mix of veggies, grains & flavorful dressing', vegetarian: true },
+      { name: 'Cheesy Chilli Momos', price: '₹99/₹159', description: 'Soft dumplings tossed in spicy chilli sauce with a cheesy twist', popular: true },
+      { name: 'Peri Peri Cheesy Chilli Momos', price: '₹109/₹169', description: 'Flavor-packed momos coated in fiery peri peri and melted cheese', popular: true },
+      { name: 'Paneer Momos', price: '₹89/₹149', description: 'Delicate dumplings filled with seasoned paneer and aromatic spices', popular: true },
+      { name: 'Peri Peri Paneer Momos', price: '₹99/₹159', description: 'Paneer-filled momos tossed in bold peri peri flavors', popular: true },
+      { name: 'Veg Momos', price: '₹79/₹139', description: 'Steamed dumplings stuffed with finely seasoned vegetables' },
+      { name: 'Veg Peri Peri Momos', price: '₹89/₹149', description: 'Veggie-filled momos with a spicy peri peri punch' },
+      { name: 'Dumplings', price: '₹179', description: 'Soft steamed dumplings served hot with flavorful dipping sauce' },
+      
     ],
 
     dips: [
@@ -46,12 +46,13 @@ export function FoodMenu() {
     ],
 
     noodles: [
-      { name: 'Maggie', price: '₹49', description: 'Classic comfort noodles cooked with our signature masala touch', popular: true },
-      { name: 'Double Masala Maggie', price: '₹59', description: 'Extra masala-loaded noodles for a richer, bolder taste', popular: true },
-      { name: 'Spicy Chessy Noodles', price: '₹80', description: 'Hot noodles tossed in spicy sauce with creamy melted cheese', spicy: true },
-      { name: 'Veg Spicy Korean Noodles', price: '₹89', description: 'Korean-style noodles with bold spices and veggie crunch', vegetarian: true },
+      { name: 'Maggie', price: '₹59', description: 'Classic comfort noodles cooked with our signature masala touch', popular: true },
+      { name: 'Double Masala Maggie', price: '₹69', description: 'Extra masala-loaded noodles for a richer, bolder taste', popular: true },
+      { name: 'Spicy Chessy Noodles', price: '₹89', description: 'Hot noodles tossed in spicy sauce with creamy melted cheese', spicy: true },
+      { name: 'Veg Spicy Korean Noodles', price: '₹99', description: 'Korean-style noodles with bold spices and veggie crunch', vegetarian: true },
       { name: 'Bao', price: '₹199', description: 'Soft fluffy bao stuffed with flavorful fillings you’ll love' },
       { name: 'Stuffed Garlic Bread', price: '₹149', description: 'Buttery garlic bread loaded with cheese and sweet corn filling' },
+      { name: 'Chilly Cheese Toast', price: '₹129', description: 'A wholesome mix of veggies, grains & flavorful dressing', vegetarian: true },
     ],
 
     desserts: [

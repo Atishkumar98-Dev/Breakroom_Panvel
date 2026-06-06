@@ -123,49 +123,83 @@ export function PoolSection() {
         </p>
 
         {/* 🔥 PRICING SECTION */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          className="mb-20 text-center"
-        >
-          <h3 className="text-3xl text-primary font-bold mb-4">
-            HOURLY PRICING
-          </h3>
+       {/* 🔥 PRICING SECTION */}
+<motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  className="mb-20 text-center"
+>
+  <h3 className="text-3xl text-primary font-bold mb-4">
+    HOURLY PRICING
+  </h3>
 
-          <p className="text-primary mb-2 font-semibold">
-            {pricing.label}
-          </p>
+  <p className="text-primary mb-2 font-semibold">
+    {pricing.label}
+  </p>
 
-          <p className="text-sm text-gray-400 mb-6">
-            💡 Weekday before 5 PM & Weekend before 2 PM get discounted pricing
-          </p>
+  <p className="text-sm text-gray-400 mb-6">
+    💡 Weekday before 5 PM & Weekend before 2 PM get discounted pricing
+  </p>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-xl mx-auto">
+  <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-primary/30 bg-white/5 backdrop-blur-lg">
 
-            {/* HALF */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="p-6 rounded-xl border border-primary/30 bg-white/5 backdrop-blur-lg"
-            >
-              <h4 className="text-primary font-bold mb-2">30 Minutes</h4>
-              <p className="text-4xl text-primary font-bold">
-                ₹{pricing.half}
-              </p>
-            </motion.div>
+    {/* Header */}
+    <div className="grid grid-cols-2 bg-primary/10">
+      <div className="p-5 border-r border-primary/20">
+        <h4 className="text-primary font-bold text-xl">
+          30 Minutes
+        </h4>
+      </div>
 
-            {/* FULL */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="p-6 rounded-xl border border-primary/30 bg-white/5 backdrop-blur-lg"
-            >
-              <h4 className="text-primary font-bold mb-2">1 Hour</h4>
-              <p className="text-4xl text-primary font-bold">
-                ₹{pricing.full}
-              </p>
-            </motion.div>
+      <div className="p-5">
+        <h4 className="text-primary font-bold text-xl">
+          1 Hour
+        </h4>
+      </div>
+    </div>
 
-          </div>
-        </motion.div>
+    {/* Price Row */}
+    <div className="grid grid-cols-2">
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="p-8 border-r border-primary/20"
+      >
+        <p className="text-5xl font-bold text-primary">
+          ₹{pricing.half}
+        </p>
+      </motion.div>
+
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="p-8"
+      >
+        <p className="text-5xl font-bold text-primary">
+          ₹{pricing.full}
+        </p>
+      </motion.div>
+    </div>
+
+    {/* Book Table Section */}
+    <div className="border-t border-primary/20 p-6">
+      <motion.a
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        href="https://wa.me/919999999999?text=Hi%20Breakroom,%20I%20would%20like%20to%20book%20a%20pool%20table."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold rounded-full shadow-lg"
+      >
+        <Target className="w-5 h-5" />
+        BOOK TABLE
+      </motion.a>
+
+      <p className="text-gray-400 text-sm mt-3">
+        Advance booking recommended on weekends
+      </p>
+    </div>
+
+  </div>
+</motion.div>
 
         {/* FEATURES */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
