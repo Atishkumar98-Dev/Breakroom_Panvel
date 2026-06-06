@@ -246,9 +246,16 @@ export function PoolSection() {
                 ))}
               </ul>
 
-              <button className="px-5 py-2 border border-primary text-primary rounded-full hover:bg-primary hover:text-black transition">
-                BOOK NOW
-              </button>
+              <motion.a
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  href={`https://wa.me/919137294841?text=Hi%20Breakroom,%20I%20would%20like%20to%20book%20the%20${encodeURIComponent(pkg.name)}%20package.`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center px-5 py-2 border border-primary text-primary rounded-full hover:bg-primary hover:text-black transition"
+>
+  BOOK NOW
+</motion.a>
             </motion.div>
           ))}
         </div>
